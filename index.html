@@ -112,6 +112,34 @@
   50% { transform: translateY(-10px); }
 }
 
+/* Romantic falling rose petals */
+.petal {
+  position: fixed;
+  top: -40px;
+  z-index: 900;
+  pointer-events: none;
+  user-select: none;
+  animation: petalFall linear forwards;
+  opacity: 0.85;
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translateY(-40px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) rotate(540deg);
+    opacity: 0;
+  }
+}
+
   </style>
 </head>
 <body>
