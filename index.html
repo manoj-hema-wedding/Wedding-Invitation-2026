@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4b101d">
+  <meta name="description" content="The wedding celebration of Manoj and Hema — 26 November 2026.">
+  <title>Manoj & Hema | Wedding Invitation</title>
+  <style>
+    :root{--wine:#4b101d;--wine2:#6a1b2b;--gold:#b58a45;--gold2:#e4c98e;--cream:#fbf6eb;--ink:#34251e}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+    a{color:inherit} .topline{height:7px;background:linear-gradient(90deg,var(--wine),var(--gold2),var(--wine))}
+    .hero{min-height:94svh;display:grid;place-items:center;text-align:center;padding:56px 20px;color:#fff8e8;position:relative;overflow:hidden;background:radial-gradient(ellipse at center,#74283a 0,#4b101d 55%,#260811 100%)}
+    .hero:before,.hero:after{content:"";position:absolute;inset:18px;border:1px solid rgba(228,201,142,.6);pointer-events:none}
+    .hero:after{inset:26px;border:1px solid rgba(228,201,142,.22)}
+    .mandala{font-size:42px;color:var(--gold2);margin-bottom:18px}
+    .eyebrow{letter-spacing:.28em;text-transform:uppercase;font:11px Arial,sans-serif;color:var(--gold2)}
+    h1{font-size:clamp(48px,10vw,88px);font-weight:normal;line-height:1.02;margin:20px 0 8px}
+    .amp{color:var(--gold2);font-style:italic}
+    .hero p{font-size:clamp(15px,3vw,20px);line-height:1.7;max-width:600px;margin:16px auto}
+    .date-pill{display:inline-block;border:1px solid var(--gold);padding:12px 22px;margin-top:18px;letter-spacing:.14em;font:12px Arial,sans-serif}
+    .ornament{color:var(--gold);letter-spacing:.5em;margin:22px 0}
+    .music{position:fixed;z-index:5;right:15px;top:15px;border:1px solid var(--gold2);border-radius:30px;background:#4b101de8;color:#fff8e8;padding:10px 14px;font:12px Arial,sans-serif;cursor:pointer}
+    main{max-width:980px;margin:auto;padding:0 20px}
+    section{padding:72px 0;text-align:center}
+    .kicker{color:#946d35;letter-spacing:.25em;text-transform:uppercase;font:11px Arial,sans-serif}
+    h2{font-size:clamp(30px,6vw,46px);font-weight:normal;color:var(--wine);margin:12px 0 18px}
+    .intro{max-width:680px;margin:0 auto;line-height:1.8;font-size:17px}
+    .divider{color:var(--gold);font-size:22px;margin:18px 0}
+    .photo-frame{max-width:760px;margin:30px auto 0;padding:9px;border:1px solid var(--gold);background:#fffaf0;box-shadow:0 12px 35px #3b1b1614}
+    .photo-placeholder{min-height:310px;display:grid;place-items:center;padding:25px;text-align:center;background:linear-gradient(135deg,#eadcc1,#f8f0df 50%,#dfc8a5);color:#70532e}
+    .photo-placeholder strong{display:block;font-size:22px;font-weight:normal;margin-bottom:8px}
+    .photo-placeholder small{font:12px Arial,sans-serif;line-height:1.6}
+    .countdown{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:28px auto}
+    .timebox{min-width:78px;padding:16px 10px;border:1px solid #c8a66a;background:#fffaf1}
+    .timebox b{display:block;font-size:30px;color:var(--wine);font-weight:normal}
+    .timebox span{font:10px Arial,sans-serif;letter-spacing:.15em;color:#80643b}
+    .events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}
+    .event{padding:28px 20px;border:1px solid #c9aa72;background:#fffaf1}
+    .event .symbol{font-size:27px;color:var(--gold)}
+    .event h3{font-size:25px;font-weight:normal;color:var(--wine);margin:12px 0}
+    .event p{line-height:1.75;margin:5px 0}
+    .family-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:760px;margin:28px auto}
+    .family{padding:22px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);line-height:1.9}
+    .family h3{font-size:21px;color:var(--wine);font-weight:normal;margin:0 0 8px}
+    .venue{background:var(--wine);color:#fff6e4;padding:46px 22px;margin:20px 0}
+    .venue h2{color:var(--gold2)}
+    .venue p{line-height:1.8}
+    .maplink{display:inline-block;margin-top:14px;padding:12px 20px;border:1px solid var(--gold2);text-decoration:none;color:#fff6e4;font:12px Arial,sans-serif;letter-spacing:.1em}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+    .gallery .photo-placeholder{min-height:210px}
+    .rsvp{max-width:650px;margin:25px auto 0;padding:28px;border:1px solid var(--gold);background:#fffaf1}
+    .rsvp input,.rsvp select,.rsvp textarea{width:100%;padding:13px;margin:7px 0;border:1px solid #d7c39e;background:#fffdf8;font:14px Arial,sans-serif}
+    .rsvp button{margin-top:10px;background:var(--wine);color:white;border:0;padding:14px 24px;letter-spacing:.12em;cursor:pointer}
+    footer{text-align:center;background:#2b0911;color:#f8e9c8;padding:38px 18px;line-height:1.8}
+    footer strong{font-size:26px;font-weight:normal;color:var(--gold2)}
+    @media(max-width:650px){section{padding:54px 0}.events,.family-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery .photo-placeholder{min-height:160px}.photo-placeholder{min-height:230px}.hero:before{inset:10px}.hero:after{inset:17px}}
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <button class="music" id="musicBtn" aria-label="Toggle instrumental music">♫ Play music</button>
+  <header class="hero">
+    <div>
+      <div class="mandala">ॐ</div>
+      <div class="eyebrow">With the blessings of our families</div>
+      <div class="ornament">✦ ❀ ✦</div>
+      <p>Joyfully invite you to celebrate the beginning of our forever</p>
+      <h1>Manoj <span class="amp">&</span><br>Hema</h1>
+      <div class="eyebrow">Wedding Celebration</div>
+      <div class="date-pill">THURSDAY · 26 NOVEMBER 2026</div>
+      <p>Two hearts • One beautiful journey</p>
+      <div class="ornament">❧ ✧ ❧</div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="kicker">A celebration of love</div>
+      <h2>Our Story</h2>
+      <p class="intro">With the blessings of the Almighty and the love of our families, we invite you to be part of our special day as we join our lives in marriage. Your presence and blessings will make our celebration even more meaningful.</p>
+      <div class="photo-frame">
+        <div class="photo-placeholder"><div><strong>Your favourite pre-wedding photograph goes here</strong><small>Replace <code>assets/couple-main.jpg</code> with your photo.<br>Recommended: landscape image, 1600 × 1000 px.</small></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="kicker">Save the date</div>
+      <h2>Counting Down to Forever</h2>
+      <div class="countdown" id="countdown">
+        <div class="timebox"><b id="days">--</b><span>DAYS</span></div>
+        <div class="timebox"><b id="hours">--</b><span>HOURS</span></div>
+        <div class="timebox"><b id="minutes">--</b><span>MINUTES</span></div>
+        <div class="timebox"><b id="seconds">--</b><span>SECONDS</span></div>
+      </div>
+      <p class="intro">The countdown to our happily ever after has begun.</p>
+    </section>
+
+    <section>
+      <div class="kicker">The celebrations</div>
+      <h2>Wedding Events</h2>
+      <div class="events">
+        <article class="event">
+          <div class="symbol">❀</div><h3>Reception</h3>
+          <p><strong>Wednesday, 25 November 2026</strong></p>
+          <p>7:00 PM onwards</p><p>Dinner at 8:00 PM</p>
+        </article>
+        <article class="event">
+          <div class="symbol">✧</div><h3>Wedding Ceremony</h3>
+          <p><strong>Thursday, 26 November 2026</strong></p>
+          <p>Muhurtham</p><p>8:45 AM – 9:25 AM</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="kicker">Together with our families</div>
+      <h2>With the Blessings of Our Elders</h2>
+      <div class="family-grid">
+        <div class="family">
+          <h3>Groom</h3>
+          <strong>Ch. Sri. Manoj N</strong><br>
+          Son of<br>
+          Smt. Saraswathi &amp; Sri. Naresh Rao P. Amalkar
+        </div>
+        <div class="family">
+          <h3>Bride</h3>
+          <strong>Ch. Sou. Hema B N</strong><br>
+          Daughter of<br>
+          Smt. Chandramma &amp; Sri. Narayan Sindhe
+        </div>
+      </div>
+      <p class="intro">With the loving blessings of Smt. Savithri Bai and Late Sri. Prakash Rao Amalkar.</p>
+    </section>
+
+    <section class="venue">
+      <div class="kicker" style="color:#e4c98e">We look forward to welcoming you</div>
+      <h2>Venue</h2>
+      <p><strong>Sri Jagadguru Thontadharya Sidhalingeshwara<br>Samudhaya Bhavana</strong></p>
+      <p>Reception and wedding ceremony at the same venue</p>
+      <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Sri+Jagadguru+Thontadharya+Sidhalingeshwara+Samudhaya+Bhavana" target="_blank" rel="noopener">OPEN LOCATION IN MAPS ↗</a>
+      <p style="font-size:12px;opacity:.8;margin-top:18px">Please confirm the exact map pin before sharing this invitation.</p>
+    </section>
+
+    <section>
+      <div class="kicker">Moments to remember</div>
+      <h2>Our Pre-Wedding Gallery</h2>
+      <p class="intro">A few frames from the beginning of our forever.</p>
+      <div class="gallery">
+        <div class="photo-placeholder"><div><strong>Photo 01</strong><small>assets/gallery-1.jpg</small></div></div>
+        <div class="photo-placeholder"><div><strong>Photo 02</strong><small>assets/gallery-2.jpg</small></div></div>
+        <div class="photo-placeholder"><div><strong>Photo 03</strong><small>assets/gallery-3.jpg</small></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="kicker">Your blessings mean the world to us</div>
+      <h2>Kindly Respond</h2>
+      <p class="intro">Please let us know if you will be joining our celebration.</p>
+      <div class="rsvp">
+        <form id="rsvpForm">
+          <input id="guestName" required placeholder="Your name" aria-label="Your name">
+          <input id="guestCount" type="number" min="1" max="20" value="1" required aria-label="Number of guests" placeholder="Number of guests">
+          <select id="attendance" aria-label="Attendance"><option value="Joyfully attending">Joyfully attending</option><option value="Regretfully unable to attend">Regretfully unable to attend</option></select>
+          <textarea id="guestMessage" rows="3" placeholder="Your wishes (optional)" aria-label="Your wishes"></textarea>
+          <button type="submit">SEND RSVP ON WHATSAPP</button>
+        </form>
+        <small style="display:block;line-height:1.6;margin-top:12px">The RSVP button opens WhatsApp with your response ready to send. Add your WhatsApp number in the code before publishing.</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="ornament">✦ ❀ ✦</div>
+    <strong>Manoj &amp; Hema</strong>
+    <div>26 · 11 · 2026</div>
+    <p>With love, gratitude and the blessings of our families.</p>
+    <small>We can't wait to celebrate with you!</small>
+  </footer>
+
+<script>
+  // Set your WhatsApp number below in international format, without + or spaces.
+  const RSVP_WHATSAPP_NUMBER = "91XXXXXXXXXX";
+  const weddingDate = new Date("2026-11-26T08:45:00+05:30").getTime();
+  function updateCountdown(){
+    const diff = weddingDate - Date.now();
+    if(diff <= 0){ document.getElementById("countdown").innerHTML = "<p>Today, our forever begins! ❤️</p>"; return; }
+    const d=Math.floor(diff/86400000), h=Math.floor(diff%86400000/3600000), m=Math.floor(diff%3600000/60000), s=Math.floor(diff%60000/1000);
+    document.getElementById("days").textContent=d;
+    document.getElementById("hours").textContent=h;
+    document.getElementById("minutes").textContent=m;
+    document.getElementById("seconds").textContent=s;
+  }
+  updateCountdown(); setInterval(updateCountdown,1000);
+
+  document.getElementById("rsvpForm").addEventListener("submit",function(e){
+    e.preventDefault();
+    const name=document.getElementById("guestName").value.trim();
+    const count=document.getElementById("guestCount").value;
+    const attendance=document.getElementById("attendance").value;
+    const wishes=document.getElementById("guestMessage").value.trim();
+    const message=`Manoj & Hema Wedding RSVP%0AName: ${encodeURIComponent(name)}%0AGuests: ${count}%0AResponse: ${encodeURIComponent(attendance)}%0AWishes: ${encodeURIComponent(wishes)}`;
+    if(RSVP_WHATSAPP_NUMBER.includes("X")){ alert("Please add your WhatsApp number in index.html before publishing. You can still use the invitation without RSVP."); return; }
+    window.open(`https://wa.me/${RSVP_WHATSAPP_NUMBER}?text=${message}`,"_blank","noopener");
+  });
+
+  // Original, locally generated gentle bell-and-pad tones; no copyrighted recording.
+  let audioCtx=null, musicTimer=null, musicOn=false, noteIndex=0;
+  const btn=document.getElementById("musicBtn");
+  const notes=[261.63,329.63,392.00,523.25,392.00,329.63,293.66,349.23];
+  function playTone(freq,when,duration,volume,type){
+    const osc=audioCtx.createOscillator(), gain=audioCtx.createGain();
+    osc.type=type; osc.frequency.setValueAtTime(freq,when);
+    gain.gain.setValueAtTime(0.0001,when);
+    gain.gain.exponentialRampToValueAtTime(volume,when+0.08);
+    gain.gain.exponentialRampToValueAtTime(0.0001,when+duration);
+    osc.connect(gain); gain.connect(audioCtx.destination);
+    osc.start(when); osc.stop(when+duration+0.03);
+  }
+  function musicStep(){
+    if(!musicOn)return;
+    const t=audioCtx.currentTime;
+    playTone(notes[noteIndex%notes.length],t,1.8,0.045,"sine");
+    if(noteIndex%2===0) playTone(notes[(noteIndex+2)%notes.length]/2,t,2.5,0.018,"triangle");
+    noteIndex++;
+  }
+  btn.addEventListener("click",async()=>{
+    if(!musicOn){
+      audioCtx = audioCtx || new (window.AudioContext||window.webkitAudioContext)();
+      await audioCtx.resume(); musicOn=true; musicStep(); musicTimer=setInterval(musicStep,900);
+      btn.textContent="♫ Pause music";
+    }else{
+      musicOn=false; clearInterval(musicTimer); if(audioCtx) audioCtx.suspend();
+      btn.textContent="♫ Play music";
+    }
+  });
+</script>
+</body>
+</html>
