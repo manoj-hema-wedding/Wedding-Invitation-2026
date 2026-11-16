@@ -209,7 +209,26 @@
 
   // Original, locally generated gentle bell-and-pad tones; no copyrighted recording.
   let audioCtx=null, musicTimer=null, musicOn=false, noteIndex=0;
-  const btn=document.getElementById("musicBtn");
+  
+const musicBtn = document.getElementById("musicBtn");
+
+const weddingMusic = new Audio("assets/wedding-song.mp3");
+weddingMusic.loop = true;
+weddingMusic.volume = 0.5;
+
+musicBtn.addEventListener("click", async () => {
+  try {
+    if (weddingMusic.paused) {
+      await weddingMusic.play();
+      musicBtn.textContent = "❚❚ Pause Music";
+    } else {
+      weddingMusic.pause();
+      musicBtn.textContent = "♫ Play Music";
+    }
+  } catch (error) {
+    alert("Unable to play music. Please try again.");
+  }
+});
   const notes=[261.63,329.63,392.00,523.25,392.00,329.63,293.66,349.23];
   function playTone(freq,when,duration,volume,type){
     const osc=audioCtx.createOscillator(), gain=audioCtx.createGain();
