@@ -206,10 +206,6 @@
     if(RSVP_WHATSAPP_NUMBER.includes("X")){ alert("Please add your WhatsApp number in index.html before publishing. You can still use the invitation without RSVP."); return; }
     window.open(`https://wa.me/${RSVP_WHATSAPP_NUMBER}?text=${message}`,"_blank","noopener");
   });
-
-  // Original, locally generated gentle bell-and-pad tones; no copyrighted recording.
-  let audioCtx=null, musicTimer=null, musicOn=false, noteIndex=0;
-  
 const musicBtn = document.getElementById("musicBtn");
 
 const weddingMusic = new Audio("assets/wedding-song.mp3");
@@ -229,32 +225,7 @@ musicBtn.addEventListener("click", async () => {
     alert("Unable to play music. Please try again.");
   }
 });
-  const notes=[261.63,329.63,392.00,523.25,392.00,329.63,293.66,349.23];
-  function playTone(freq,when,duration,volume,type){
-    const osc=audioCtx.createOscillator(), gain=audioCtx.createGain();
-    osc.type=type; osc.frequency.setValueAtTime(freq,when);
-    gain.gain.setValueAtTime(0.0001,when);
-    gain.gain.exponentialRampToValueAtTime(volume,when+0.08);
-    gain.gain.exponentialRampToValueAtTime(0.0001,when+duration);
-    osc.connect(gain); gain.connect(audioCtx.destination);
-    osc.start(when); osc.stop(when+duration+0.03);
-  }
-  function musicStep(){
-    if(!musicOn)return;
-    const t=audioCtx.currentTime;
-    playTone(notes[noteIndex%notes.length],t,1.8,0.045,"sine");
-    if(noteIndex%2===0) playTone(notes[(noteIndex+2)%notes.length]/2,t,2.5,0.018,"triangle");
-    noteIndex++;
-  }
-  btn.addEventListener("click",async()=>{
-    if(!musicOn){
-      audioCtx = audioCtx || new (window.AudioContext||window.webkitAudioContext)();
-      await audioCtx.resume(); musicOn=true; musicStep(); musicTimer=setInterval(musicStep,900);
-      btn.textContent="♫ Pause music";
-    }else{
-      musicOn=false; clearInterval(musicTimer); if(audioCtx) audioCtx.suspend();
-      btn.textContent="♫ Play music";
-    }
+
   });
 </script>
 </body>
