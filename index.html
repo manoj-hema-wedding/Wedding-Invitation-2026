@@ -331,7 +331,27 @@ musicBtn.addEventListener("click", async () => {
 function openInvitation() {
   document.getElementById("inviteCover").classList.add("hidden");
 }
+// Falling rose petals effect
+function createRosePetal() {
+  const petal = document.createElement("div");
+  petal.className = "petal";
+  petal.textContent = "❀";
 
+  petal.style.color = "#e8a0ad";
+  petal.style.left = Math.random() * 100 + "vw";
+  petal.style.fontSize = (14 + Math.random() * 14) + "px";
+
+  const duration = 8 + Math.random() * 7;
+  petal.style.animationDuration = duration + "s";
+
+  document.body.appendChild(petal);
+
+  setTimeout(() => {
+    petal.remove();
+  }, duration * 1000);
+}
+
+setInterval(createRosePetal, 700);
 </script>
 </body>
 </html>
