@@ -56,6 +56,62 @@
     footer{text-align:center;background:#2b0911;color:#f8e9c8;padding:38px 18px;line-height:1.8}
     footer strong{font-size:26px;font-weight:normal;color:var(--gold2)}
     @media(max-width:650px){section{padding:54px 0}.events,.family-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery .photo-placeholder{min-height:160px}.photo-placeholder{min-height:230px}.hero:before{inset:10px}.hero:after{inset:17px}}
+ 
+/* Wedding invitation opening screen */
+.invite-cover {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: radial-gradient(circle, #74283a, #260811);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff8e8;
+  text-align: center;
+  padding: 25px;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.invite-cover h2 {
+  color: #e4c98e;
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+.invite-cover p {
+  line-height: 1.7;
+}
+
+.envelope {
+  font-size: 100px;
+  margin: 20px;
+  animation: envelopeFloat 2s ease-in-out infinite;
+}
+
+.open-invite {
+  background: #e4c98e;
+  color: #4b101d;
+  border: 1px solid #fff0c5;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.invite-cover.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@keyframes envelopeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
   </style>
 </head>
 <body>
